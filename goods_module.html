@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+<div class="main">
+    <div class="header">
+    	<ul id="pages">
+            <li><a href="/">home</a></li>
+            <li><a href="/#/tags">tags</a></li>
+            <li><a href="/#/archive">archive</a></li>
+    	</ul>
+    </div>
+	<div class="wrap-header">
+	<h1>
+    <a href="/" id="title"></a>
+	</h1>
+	</div>
+<div id="md" style="display: none;">
+<!-- markdown -->
+商品管理模块
+
+问题一：上传的图片和缩略图保存到哪里?
+
+问题二：在模型中哪里处理？
+
+答：使用钩子函数
+
+_before_insert(&$data, $option)：在调用add方法时这个方法就自动调用了
+
+ 
+
+实际操作
+
+上传图片
+    
+
+Ø 注意上传大小限制
+
+Ø 修改配置文件，设置上传条件
+
+Ø 模型中的钩子函数
+
+Ø 将上传代码封装成一个函数
+
+Ø 修改表单
+
+搜索
+Ø 修改页面表单
+
+Ø 控制器中增加search方法
+
+Ø 控制器中组装$where的使用
+
+Ø 搜素功能如下
+
+翻页
+Ø 模型中增加翻页代码
+
+Ø 修改控制器，获取数据和页码信息
+
+Ø 页面输出翻页信息
+
+排序
+Ø 修改控制器
+
+Ø 修改页面
+
+删除
+Ø 修改表单
+
+Ø 控制器中delete方法增加代码
+
+Ø 封装删除函数
+
+Ø 在模型中增加一个钩子函数完成
+
+扩展
+ GET提交和POST提交有什么区别？
+ TP中对GIF图片生成缩略图时会失败
+                Think/image/driver/GIF.class.php
+
+ 在TP中什么时候会被SQL注入？
+<!-- markdown end -->
+</div>
+<div class="entry" id="main">
+<!-- content -->
+<p>商品管理模块</p>
+
+<p>问题一：上传的图片和缩略图保存到哪里?</p>
+
+<p>问题二：在模型中哪里处理？</p>
+
+<p>答：使用钩子函数</p>
+
+<p><em>before</em>insert(&amp;<span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo>,</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-43" role="math" style="width: 2.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.169em; height: 0px; font-size: 101%;"><span style="position: absolute; clip: rect(1.303em 1002.11em 2.54em -999.997em); top: -2.163em; left: 0.003em;"><span class="mrow" id="MathJax-Span-44"><span class="mi" id="MathJax-Span-45" style="font-family: MathJax_Math-italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-46" style="font-family: MathJax_Math-italic;">a</span><span class="mi" id="MathJax-Span-47" style="font-family: MathJax_Math-italic;">t</span><span class="mi" id="MathJax-Span-48" style="font-family: MathJax_Math-italic;">a</span><span class="mo" id="MathJax-Span-49" style="font-family: MathJax_Main;">,</span></span><span style="display: inline-block; width: 0px; height: 2.169em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left-width: 0px; border-left-style: solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo>,</mo></math></span></span><script type="math/tex" id="MathJax-Element-8">data, </script>option)：在调用add方法时这个方法就自动调用了</p>
+
+<p>实际操作</p>
+
+<p>上传图片</p>
+
+<p>Ø 注意上传大小限制</p>
+
+<p>Ø 修改配置文件，设置上传条件</p>
+
+<p>Ø 模型中的钩子函数</p>
+
+<p>Ø 将上传代码封装成一个函数</p>
+
+<p>Ø 修改表单</p>
+
+<p>搜索
+Ø 修改页面表单</p>
+
+<p>Ø 控制器中增加search方法</p>
+
+<p>Ø 控制器中组装$where的使用</p>
+
+<p>Ø 搜素功能如下</p>
+
+<p>翻页
+Ø 模型中增加翻页代码</p>
+
+<p>Ø 修改控制器，获取数据和页码信息</p>
+
+<p>Ø 页面输出翻页信息</p>
+
+<p>排序
+Ø 修改控制器</p>
+
+<p>Ø 修改页面</p>
+
+<p>删除
+Ø 修改表单</p>
+
+<p>Ø 控制器中delete方法增加代码</p>
+
+<p>Ø 封装删除函数</p>
+
+<p>Ø 在模型中增加一个钩子函数完成</p>
+
+<p>扩展
+ GET提交和POST提交有什么区别？
+ TP中对GIF图片生成缩略图时会失败
+                Think/image/driver/GIF.class.php</p>
+
+<p>在TP中什么时候会被SQL注入？</p>
+<!-- content end -->
+</div>
+<br>
+<br>
+    <div id="disqus_thread"></div>
+	<div class="footer">
+		<p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+	</div>
+</div>
+<script src="main.js"></script>
+<script id="content" type="text/mustache">
+    <h1>{{title}}</h1>
+    <div class="tag">
+    {{date}}
+    {{#tags}}
+    <a href="/#/tag/{{name}}">#{{name}}</a>
+    {{/tags}}
+    </div>
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            //path
+            var path = "goods_module.html";
+            //path end
+            var now = 0;
+            for (var i = 0; i < data.posts.length; ++i)
+                if (path == data.posts[i].path)
+                    now = i;
+            var post = data.posts[now];
+            var tmp = post.tags.split(" ");
+            var tags = [];
+            for (var i = 0; i < tmp.length; ++i)
+                if (tmp[i].length > 0)
+                    tags.push({"name": tmp[i]});
+            var contentTemplate = Hogan.compile($("#content").html());
+            var contentHtml = contentTemplate.render({"title": post.title, "tags": tags, "date": post.date});
+            $("#main").prepend(contentHtml);
+            if (data.disqus_shortname.length > 0) {
+                var disqus_shortname = data.disqus_shortname;
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        }
+    });
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
+</script>
+</body>
+</html>
